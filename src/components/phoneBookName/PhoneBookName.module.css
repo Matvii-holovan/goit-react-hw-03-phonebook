@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    text-align: center;
+    align-items: center;
+}
+
+.button {
+    margin: 12px auto;
+    padding: 10px 10px;
+    max-width: 160px;
+    height: 56px;
+    background-color: rgb(45, 57, 110);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: white;
+    cursor: pointer;
+    display: block;
+    /* margin: 48px; */
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.labelInput {
+    color: #3e4d2e;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+}
+
+.inputName {
+    border-color:  rgb(20, 24, 41);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+}

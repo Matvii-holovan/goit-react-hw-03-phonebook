@@ -1,0 +1,29 @@
+.titlePhoneBook {
+    text-align: center;
+    color: #3e4d2e;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* margin: 10px auto; */
+    text-align: center;
+    align-items: center;
+}
+
+.titleContacts {
+    text-align: center;
+    color: #3e4d2e;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+}
