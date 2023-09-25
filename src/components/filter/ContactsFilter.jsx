@@ -1,16 +1,17 @@
-import css from './ContactsFilter.module.css'
+import css from './ContactsFilter.module.css';
 import React from 'react';
 
-const ContactsFilter = ({filterContacts}) => {
+const ContactsFilter = ({ filterContacts }) => {
   const handelChange = ({ target: { value } }) => {
     filterContacts(value);
   };
   return (
     <form className={'css.container'}>
       <div className={css.container}>
-        <label htmlFor="filter"  className={css.labelInput}>Find contacts by name</label>
+        <label htmlFor="filter" className={css.labelInput}>
+          Find contacts by name
+        </label>
         <input
-          //   value={this.state.filter}
           className={css.inputFilter}
           onChange={handelChange}
           type="text"
