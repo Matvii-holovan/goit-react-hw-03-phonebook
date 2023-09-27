@@ -62,7 +62,7 @@ export class App extends Component {
         </div>
         <div className={css.container}>
           <h2 className={css.titleContacts}>Contacts</h2>
-          <ContactsFilter filterContacts={this.state.filter} />
+          <ContactsFilter filterContacts={this.filterContacts} />
           <ul className="bookList">
             {(this.state.filter ?? this.state.contacts).map(el => (
               <BookItem
