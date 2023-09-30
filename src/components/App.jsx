@@ -7,7 +7,7 @@ import ContactsFilter from './filter/ContactsFilter';
 export class App extends Component {
   state = {
     contacts: [],
-    filter: null,
+    filter: '',
   };
 
   componentDidMount() {
@@ -45,12 +45,11 @@ export class App extends Component {
     }));
   };
 
-  filterContacts = filterQuery => {
-    this.setState(prev => ({
-      filter: prev.contacts.filter(el =>
-        el.name.toLowerCase().includes(filterQuery.toLowerCase())
-      ),
-    }));
+
+  filterInputNames = event => {
+    this.setState({
+      filter: event.currentTarget.value,
+    });
   };
 
   render() {
@@ -62,15 +61,26 @@ export class App extends Component {
         </div>
         <div className={css.container}>
           <h2 className={css.titleContacts}>Contacts</h2>
-          <ContactsFilter filterContacts={this.filterContacts} />
+          <ContactsFilter
+            value={this.state.filter}
+            onChange={this.filterInputNames}
+          />
           <ul className="bookList">
-            {(this.state.filter ?? this.state.contacts).map(el => (
-              <BookItem
-                key={el.id}
-                contacts={el}
-                handleDelete={this.handleDelete}
-              />
-            ))}
+            {this.state.contacts
+              .filter(
+                contact =>
+                  this.state.filter === '' ||
+                  contact.name
+                    .toLowerCase()
+                    .includes(this.state.filter.toLowerCase())
+              )
+              .map(el => (
+                <BookItem
+                  key={el.id}
+                  contacts={el}
+                  handleDelete={this.handleDelete}
+                />
+              ))}
           </ul>
         </div>
       </div>
